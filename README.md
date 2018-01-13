@@ -1,9 +1,9 @@
 # CS502Capstone
-dataset:
+Dataset:
 
 	Netflix Prize data
 
-architecture:
+Architecture:
 
 	data-ingestion-inferstructure: Kafka, Kafka connect
 	data-transformation-layer: Kafka Streaming
@@ -11,9 +11,9 @@ architecture:
 	data-visualization-layer: NodeJS
 	cloud-inferstructure: AWS
 	
-detailed schema:
+Detailed Schema:
 	
-deliverable:
+Deliverable:
 	
 	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 	Week2: Each team member starts implementing their own module
