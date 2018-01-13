@@ -1,5 +1,6 @@
 # CS502Capstone
-dataset: Netflix Prize data
+dataset: 
+	Netflix Prize data
 
 architecture:
 
