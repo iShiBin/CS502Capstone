@@ -2,6 +2,7 @@
 dataset: Netflix Prize data
 
 architecture:
+
 	data-ingestion-inferstructure: Kafka, Kafka connect
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: Cassandra
