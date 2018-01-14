@@ -1,7 +1,7 @@
 # CS502Capstone
 Dataset:
 
-	Netflix Prize data
+	[Netflix Prize data](https://www.kaggle.com/netflix-inc/netflix-prize-data)
 
 Architecture:
 
