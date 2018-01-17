@@ -1,7 +1,7 @@
 # CS502Capstone
 Dataset:
 
-	[Netflix Prize data](https://www.kaggle.com/netflix-inc/netflix-prize-data)
+	Netflix Prize data
 
 Architecture:
 
@@ -10,12 +10,12 @@ Architecture:
 	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
 	cloud-inferstructure: AWS
-	
+
 Detailed Schema:
-	
-	
+
+​	
 Deliverable:
-	
+​	
 	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 	Week2: Each team member starts implementing their own module
 	Week3: Each team member finishes their own module
@@ -34,8 +34,8 @@ Deliverable:
 				c: Top rated month by a movie		
 		Week 4: Starts and finishes unit testing
 		
-		Bin Shi:
-		Week 1: 
+		Bin Shi: Data ingestion using kafka
+		Week 1: Produce data to kafka
 		Week 2: 
 		Week 3: 
 		Week 4: 
@@ -51,7 +51,7 @@ Deliverable:
 		Week 2: 
 		Week 3: 
 		Week 4: 
-		
-		
-		
+
+
+​		
 
