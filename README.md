@@ -1,7 +1,7 @@
 # CS502Capstone
 Dataset:
 
-	[Netflix Prize data](https://www.kaggle.com/netflix-inc/netflix-prize-data)
+	Netflix Prize data
 
 Architecture:
 
@@ -34,8 +34,8 @@ Deliverable:
 				c: Top rated month by a movie		
 		Week 4: Starts and finishes unit testing
 		
-		Bin Shi:
-		Week 1: 
+		Bin Shi: Data ingestion
+		Week 1: Produce Data in Kafka.
 		Week 2: 
 		Week 3: 
 		Week 4: 
