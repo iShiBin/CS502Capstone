@@ -5,7 +5,7 @@ Dataset:
 
 Architecture:
 
-	data-ingestion-inferstructure: Kafka, Kafka connect
+	data-ingestion-sinking-layer: Kafka, Kafka connect
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
