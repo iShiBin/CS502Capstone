@@ -1,4 +1,9 @@
-# Team 3 CS502Capstone
+# Team 3 CS502 Capstone: Video Real-Time Rating Data Pipeline
+
+Team member: 
+
+	Tongzhou Zhou, Bin Shi, Albert, Anthony
+
 Dataset:
 
 	Netflix Prize data
