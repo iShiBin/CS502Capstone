@@ -13,6 +13,7 @@ Architecture:
 	
 Detailed Schema:
 	
+	customerID(number), rating(number), date(date)
 	
 Deliverable:
 	
