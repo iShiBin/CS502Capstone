@@ -42,8 +42,8 @@ Deliverable:
 		Week 4: 
 		
 		Albert:
-		Week 1: 
-		Week 2: 
+		Week 1: Build database to store data
+		Week 2: design analyst algorithm, optimize database if needed
 		Week 3: 
 		Week 4: 
 		
