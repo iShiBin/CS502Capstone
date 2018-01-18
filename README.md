@@ -1,4 +1,4 @@
-# CS502Capstone
+# Team 3 CS502Capstone
 Dataset:
 
 	Netflix Prize data
