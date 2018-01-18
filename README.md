@@ -34,8 +34,13 @@ Deliverable:
 				c: Top rated month by a movie		
 		Week 4: Starts and finishes unit testing
 		
+<<<<<<< HEAD
 		Bin Shi: Data ingestion using kafka
 		Week 1: Produce data to kafka
+=======
+		Bin Shi: Data ingestion
+		Week 1: Produce Data in Kafka.
+>>>>>>> 9079982b697199f798d1293e815208ecd00a87c7
 		Week 2: 
 		Week 3: 
 		Week 4: 
