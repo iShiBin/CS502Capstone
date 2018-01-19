@@ -40,8 +40,10 @@ Deliverable:
 		Week 4: Starts and finishes unit testing
 		
 		Bin Shi: Data ingestion using kafka
-		Week 1: Produce data to kafka
-		Week 2: 
+		Week 1: Produce data to kafka [80% completed]
+				Send movie title data [done]
+				Send rating datea simulating the streaming [80%]
+		Week 2: Add error/exception handling and more comments in the source code
 		Week 3: 
 		Week 4: 
 		
