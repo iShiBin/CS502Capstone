@@ -1,19 +1,24 @@
-# CS502Capstone
+# Team 3 CS502 Capstone: Video Real-Time Rating Data Pipeline
+
+Team member: 
+
+	Tongzhou Zhou, Bin Shi, Albert, Anthony
+
 Dataset:
 
 	Netflix Prize data
 
 Architecture:
 
-	data-ingestion-inferstructure: Kafka, Kafka connect
+	data-ingestion-sinking-layer: Kafka, Kafka connect
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
 	cloud-inferstructure: AWS
 
 Detailed Schema:
+	customerID(number), rating(number), date(date)
 
-​	
 Deliverable:
 ​	
 	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
@@ -34,26 +39,21 @@ Deliverable:
 				c: Top rated month by a movie		
 		Week 4: Starts and finishes unit testing
 		
-<<<<<<< HEAD
 		Bin Shi: Data ingestion using kafka
 		Week 1: Produce data to kafka
-=======
-		Bin Shi: Data ingestion
-		Week 1: Produce Data in Kafka.
->>>>>>> 9079982b697199f798d1293e815208ecd00a87c7
 		Week 2: 
 		Week 3: 
 		Week 4: 
 		
 		Albert:
-		Week 1: 
-		Week 2: 
+		Week 1: Build database to store data
+		Week 2: design analyst algorithm, optimize database if needed
 		Week 3: 
 		Week 4: 
 		
-		Anthony:
-		Week 1: 
-		Week 2: 
+		Anthony: Data visualization 
+		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
+		Week 2: Setup backend for data visualization; simple front end to display data
 		Week 3: 
 		Week 4: 
 
