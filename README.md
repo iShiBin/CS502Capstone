@@ -14,13 +14,8 @@ Architecture:
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
-<<<<<<< HEAD
 	cloud-infrastructure: AWS
-	
-=======
-	cloud-inferstructure: AWS
 
->>>>>>> refs/remotes/origin/master
 Detailed Schema:
 	customerID(number), rating(number), date(date)
 
