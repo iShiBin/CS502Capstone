@@ -17,10 +17,11 @@ Architecture:
 	cloud-infrastructure: AWS
 
 Detailed Schema:
+
 	customerID(number), rating(number), date(date)
 
 Deliverable:
-​	
+
 	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 	Week2: Each team member starts implementing their own module
 	Week3: Each team member finishes their own module
