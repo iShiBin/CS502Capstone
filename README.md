@@ -14,7 +14,7 @@ Architecture:
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
-	cloud-inferstructure: AWS
+	cloud-infrastructure: AWS
 	
 Detailed Schema:
 	
@@ -33,7 +33,7 @@ Deliverable:
 		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS
 		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster 
 		Week 3: Finishes implement data transformation layer: 
-			(1) Aggragate the data into formates to support the Cassandra data schemas in (2)
+			(1) Aggregate the data into formats to support the Cassandra data schemas in (2)
 			(2) Configure Cassandra data schema to support:
 				a: Top 10 highest rating movie by a given month
 				b: Top 10 rated movie by a given month
