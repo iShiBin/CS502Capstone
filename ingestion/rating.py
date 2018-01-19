@@ -3,46 +3,65 @@ import kafka
 from datetime import date
 from datetime import timedelta
 import time
-
 from _collections import defaultdict, deque
+import os, sys
+import re
 
-with open('mv_0006972.txt', 'r') as data:
-    movie_id = next(data)[:-2] +',' # remove the last char :
-#     print(movie_id)
-    messages = defaultdict(list)
-    for line in data:
-        rate_date = line[line.rfind(',')+1:]
-#         print(rate_date)
-        messages[rate_date[:-1]].append(movie_id+line[:-1])
-#     print(messages)
+data_dir = '../data/'
+kafka_server = 'cs502-kafka-node1:9092'
+topic_name = 'input_cs502'
+cut_date = date(2000, 01, 01)
+interval = timedelta(days=1)
 
-data.close()
+debug = True
+
+
+def read_rating(file_name):
+    with open(file_name, 'r') as data:
+        movie_id = next(data)[:-2] +',' # remove the last char :
+    #     print(movie_id)
+        ratings = defaultdict(list)
+        for line in data:
+            rate_date = line[line.rfind(',')+1:]
+#             print(rate_date)
+#             if not rate_date.find('-'):
+#                 m, d, y = rate_date.split('/')
+#                 y = '20' + y
+#                 rate_date = '-'.join(y, m, d)
+            
+            ratings[rate_date[:-1]].append(movie_id+line[:-1])
+    #     print(ratings)
+    return ratings
+
+
+def collect_all_rating(data_dir):
+    all_ratings = defaultdict(list)
+    file_names = [f for f in os.listdir(data_dir) if re.match(r'mv_[0-9]+.*\.txt', f)]
+#     file_names = [f for f in os.listdir(data_dir) if f == 'mv_0000571.txt']
+#     print(file_names)
+    for f in file_names:
+        all_ratings.update(read_rating(data_dir + f))
+    
+    return all_ratings
+#     for e in all_ratings:
+#         print(e, all_ratings[e])
+
+messages = collect_all_rating(data_dir)
 
 mq = deque()
 for key in (sorted(messages)):
     mq.extend(messages[key])
 
-target = '2004-04-22'
-# while mq:
-#     dt = mq[0][mq[0].rfind(',')+1:]
-#     if dt < target:
-#         print(mq.popleft())
-#     else:
-#         break
-cut_date = date(2000, 01, 01)
-interval = timedelta(days=1)
-# print(cut_date.__str__())
+producer = kafka.KafkaProducer(bootstrap_servers = kafka_server)
 
-
-producer = kafka.KafkaProducer(bootstrap_servers = 'localhost:9092')
 while mq:
-    while True:
+    while mq:
         dt = mq[0][mq[0].rfind(',')+1:]
         if dt > cut_date.__str__(): break
         msg = mq.popleft()
-        producer.send(topic='ratings', value=msg)
+        producer.send(topic = topic_name, value=msg, timestamp_ms=time.mktime(time.gmtime()))
 #         print(msg)
-    
-#     producer.flush()
+      
+    producer.flush()
     cut_date += interval
     time.sleep(1)
