@@ -14,14 +14,18 @@ Architecture:
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
+<<<<<<< HEAD
 	cloud-infrastructure: AWS
 	
+=======
+	cloud-inferstructure: AWS
+
+>>>>>>> refs/remotes/origin/master
 Detailed Schema:
-	
 	customerID(number), rating(number), date(date)
-	
+
 Deliverable:
-	
+​	
 	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 	Week2: Each team member starts implementing their own module
 	Week3: Each team member finishes their own module
@@ -40,9 +44,11 @@ Deliverable:
 				c: Top rated month by a movie		
 		Week 4: Starts and finishes unit testing
 		
-		Bin Shi: Data ingestion
-		Week 1: Produce Data in Kafka.
-		Week 2: 
+		Bin Shi: Data ingestion using kafka
+		Week 1: Produce data to kafka [80% completed]
+				Send movie title data [done]
+				Send rating datea simulating the streaming [80%]
+		Week 2: Add error/exception handling and more comments in the source code
 		Week 3: 
 		Week 4: 
 		
@@ -57,7 +63,7 @@ Deliverable:
 		Week 2: Setup backend for data visualization; simple front end to display data
 		Week 3: 
 		Week 4: 
-		
-		
-		
+
+
+​		
 
