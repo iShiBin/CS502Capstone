@@ -9,8 +9,11 @@ topic_name = 'movie_title_year_cs502'
 producer = kafka.KafkaProducer(bootstrap_servers = kafka_server)
 
 with open(file_name, 'r') as data:
-    for msg in data:
-        producer.send(topic = topic_name, value = msg, timestamp_ms=time.mktime(time.gmtime()))
+    for movie in data:
+        first_comma_index = movie.find(',')
+        movie_id = movie[:first_comma_index]
+        movie_year_name = movie[first_comma_index + 1:]
+        producer.send(topic = topic_name, value = movie_year_name, key= movie_id, timestamp_ms=time.mktime(time.gmtime()))
 #         time.sleep(1)
 
 producer.flush()
