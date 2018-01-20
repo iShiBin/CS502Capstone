@@ -22,6 +22,7 @@ Architecture
 	data-transformation-layer: Kafka Streaming
 	data-storage-layer: AWS S3, Cassandra
 	data-visualization-layer: NodeJS
+	data-batch-processing-layer: Spark
 	cloud-infrastructure: AWS
 	
 	
