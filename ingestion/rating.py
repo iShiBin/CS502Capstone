@@ -29,8 +29,8 @@ def read_rating(file_name):
 
 def collect_all_rating(data_dir):
     all_ratings = defaultdict(list)
-#     file_names = [f for f in os.listdir(data_dir) if re.match(r'mv_[0-9]+.*\.txt', f)]
-    file_names = [f for f in os.listdir(data_dir) if f == 'mv_0011064.txt']
+    file_names = [f for f in os.listdir(data_dir) if re.match(r'mv_[0-9]+.*\.txt', f)]
+#     file_names = [f for f in os.listdir(data_dir) if f == 'mv_0011064.txt']
 #     print(file_names)
     for f in file_names:
         all_ratings.update(read_rating(data_dir + f))
@@ -57,4 +57,4 @@ while mq:
 #         print(msg)
     producer.flush()
     cut_date += interval
-    time.sleep(1)
+    time.sleep(0.5)
