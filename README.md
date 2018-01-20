@@ -25,6 +25,8 @@ Architecture
 	data-batch-processing-layer: Spark
 	cloud-infrastructure: AWS
 	
+![img](https://s3-us-west-2.amazonaws.com/github-photo-links/Screen+Shot+2018-01-19+at+10.36.51+PM.png)
+	
 	
 Detailed Schema
 ---------------
