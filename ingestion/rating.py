@@ -15,20 +15,13 @@ interval = timedelta(days=1)
 
 debug = True
 
-
 def read_rating(file_name):
     with open(file_name, 'r') as data:
-        movie_id = next(data)[:-2] +',' # remove the last char :
+        movie_id = next(data) #including the ending ':'
     #     print(movie_id)
         ratings = defaultdict(list)
         for line in data:
-            rate_date = line[line.rfind(',')+1:]
-#             print(rate_date)
-#             if not rate_date.find('-'):
-#                 m, d, y = rate_date.split('/')
-#                 y = '20' + y
-#                 rate_date = '-'.join(y, m, d)
-            
+            rate_date = line[line.rfind(',')+1:]            
             ratings[rate_date[:-1]].append(movie_id+line[:-1])
     #     print(ratings)
     return ratings
@@ -36,8 +29,8 @@ def read_rating(file_name):
 
 def collect_all_rating(data_dir):
     all_ratings = defaultdict(list)
-    file_names = [f for f in os.listdir(data_dir) if re.match(r'mv_[0-9]+.*\.txt', f)]
-#     file_names = [f for f in os.listdir(data_dir) if f == 'mv_0000571.txt']
+#     file_names = [f for f in os.listdir(data_dir) if re.match(r'mv_[0-9]+.*\.txt', f)]
+    file_names = [f for f in os.listdir(data_dir) if f == 'mv_0011064.txt']
 #     print(file_names)
     for f in file_names:
         all_ratings.update(read_rating(data_dir + f))
@@ -59,9 +52,9 @@ while mq:
         dt = mq[0][mq[0].rfind(',')+1:]
         if dt > cut_date.__str__(): break
         msg = mq.popleft()
-        producer.send(topic = topic_name, value=msg, timestamp_ms=time.mktime(time.gmtime()))
+        movie_id, movie_rating = msg[:msg.find(':')], msg[msg.find(':')+1:]
+        producer.send(topic = topic_name, value=movie_rating, key=movie_id, timestamp_ms=time.mktime(time.gmtime()))
 #         print(msg)
-      
     producer.flush()
     cut_date += interval
     time.sleep(1)
