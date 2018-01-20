@@ -1,26 +1,56 @@
-# Team 3 CS502 Capstone: Video Real-Time Rating Data Pipeline
+# Team 3 CS502 Capstone: Real-Time Moive Rating Data Pipeline
+================
 
-Team member: 
+Introduction
+------------
+
+This data pipline will process the Netflix moive real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query.
+
+Team member
+------------
 
 	Tongzhou Zhou, Bin Shi, Albert, Anthony
 
-Dataset:
+Dataset
+------------
 
 	Netflix Prize data
 
-Architecture:
+Architecture
+------------
 
-	data-ingestion-sinking-layer: Kafka, Kafka connect
+	data-ingestion-sinking-layer: Kafka, Kafka Connect
 	data-transformation-layer: Kafka Streaming
-	data-storage-layer: Cassandra
+	data-storage-layer: AWS S3, Cassandra
 	data-visualization-layer: NodeJS
 	cloud-infrastructure: AWS
+	
+	
+Detailed Schema
+---------------
 
-Detailed Schema:
+	Cassandra tables:
 
-	customerID(number), rating(number), date(date)
+	CREATE TABLE movie_rating_cs502 (
+    		start_time timestamp,
+    		rating float,
+    		movie_id int,
+    		count int,
+    		movie_title text,
+    		PRIMARY KEY (start_time, rating, movie_id)
+	) WITH CLUSTERING ORDER BY (rating DESC, movie_id ASC)
+	
+	CREATE TABLE bittiger.movie_cs502 (
+    		movie_id int,
+    		start_time timestamp,
+    		count int,
+    		movie_title text,
+    		rating float,
+    		PRIMARY KEY (movie_id, start_time)
+	) WITH CLUSTERING ORDER BY (start_time DESC)
 
-Deliverable:
+Deliverable
+---------------
 
 	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 	Week2: Each team member starts implementing their own module
