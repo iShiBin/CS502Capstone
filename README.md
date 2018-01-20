@@ -1,4 +1,5 @@
-# Team 3 CS502 Capstone: Real-Time Moive Rating Data Pipeline
+# Team 3 CS502 Capstone: 
+Real-Time Moive Rating Data Pipeline
 
 Introduction
 ------------
