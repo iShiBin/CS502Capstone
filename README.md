@@ -72,13 +72,13 @@ Deliverable
 				c: Top rated month by a movie		
 		Week 4: Starts and finishes unit testing
 		
-		Bin Shi: Data ingestion using kafka
-		Week 1: Produce data to kafka [80% completed]
+		Bin Shi: Data ingestion using kafka; Use machine learning to predict the movie rating
+		Week 1: Produce data to kafka [done]
 				Send movie title data [done]
-				Send rating datea simulating the streaming [80%]
-		Week 2: Add error/exception handling and more comments in the source code
-		Week 3: 
-		Week 4: 
+				Send rating datea simulating the streaming [done]
+		Week 2: Add error/exception handling and more comments in the source code [done]
+		Week 3: Study the classification algorithm,and apply to Netflix dataset
+		Week 4: Adjust the ML model & Summarize this project
 		
 		Albert:
 		Week 1: Build database to store data
