@@ -54,17 +54,28 @@ Detailed Schema
 Deliverable
 ---------------
 
-	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
-	Week2: Each team member starts implementing their own module
-	Week3: Each team member finishes their own module
-	Week4: Testing, Report documenting		
+	Outcome: 
+	
+		(1)We are going to have a scalable distributed data pipeline for real-time data processing and sinking;
+		(2)We are going to provide a scalable distributed database for real-time query like:
+			a: Top 10 highest rating movie by a given month
+			b: Top 10 rated movie by a given month
+			c: Top rated month by a movie
+		(3)We are going to build a batch processing layer based on AWS S3 and Spark to forecast moive rating.
+	
+	Weekly milestone:
+	
+		Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
+		Week2: Each team member starts implementing their own module
+		Week3: Each team member finishes their own module
+		Week4: Testing, Report documenting		
 	
 	Detail Ownerships:
 	
-		Tongzhou Zhou: 
-		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS
-		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster 
-		Week 3: Finishes implement data transformation layer: 
+		Tongzhou Zhou: Architecture design, implementation
+		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS (Done)
+		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster (Done)
+		Week 3: Finishes implement data transformation layer: (30% Done)
 			(1) Aggregate the data into formats to support the Cassandra data schemas in (2)
 			(2) Configure Cassandra data schema to support:
 				a: Top 10 highest rating movie by a given month
