@@ -3,7 +3,7 @@
 Introduction
 ------------
 
-This data pipline will process the Netflix moive real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query.
+This data pipline will process the Netflix moive real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query, with a datawarehouse for batching processing.
 
 Team member
 ------------
