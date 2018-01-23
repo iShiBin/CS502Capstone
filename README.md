@@ -49,8 +49,8 @@ Deliverable:
 		Anthony: Data visualization 
 		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
 		Week 2: Setup backend for data visualization; simple front end to display data
-		Week 3: 
-		Week 4: 
+		Week 3: Finish kafka consumer using nodejs, backend server and frontend development
+		Week 4: Testing and debugging
 		
 		
 		
