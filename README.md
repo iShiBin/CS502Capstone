@@ -68,20 +68,21 @@ Deliverable
 		Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 		Week2: Each team member starts implementing their own module
 		Week3: Each team member finishes their own module
-		Week4: Testing, Report documenting		
+		Week4: Testing, report documenting		
 	
 	Detail Ownerships:
 	
 		Tongzhou Zhou: Architecture design, implementation
 		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS (Done)
 		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster (Done)
-		Week 3: Finishes implement data transformation layer: (30% Done)
+		Week 3: Finish implementing data transformation layer: (30% Done)
 			(1) Aggregate the data into formats to support the Cassandra data schemas in (2)
 			(2) Configure Cassandra data schema to support:
 				a: Top 10 highest rating movie by a given month
 				b: Top 10 rated movie by a given month
-				c: Top rated month by a movie		
-		Week 4: Starts and finishes unit testing
+				c: Top rated month by a movie
+			Finish S3 set up for batch data sinking.
+		Week 4: Starts and finishes unit testing.
 		
 		Bin Shi: Data ingestion using kafka; Use machine learning to predict the movie rating
 		Week 1: Produce data to kafka [done]
@@ -91,17 +92,17 @@ Deliverable
 		Week 3: Study the classification algorithm,and apply to Netflix dataset
 		Week 4: Adjust the ML model & Summarize this project
 		
-		Albert:
-		Week 1: Build database to store data
-		Week 2: design analyst algorithm, optimize database if needed
-		Week 3: 
-		Week 4: 
+		Albert: Data visualization 
+		Week 1: Build database to store data.
+		Week 2: design analyst algorithm, optimize database if needed.
+		Week 3: Collaborate with Anthony to implement the backend for data visualization, and the front end to display data.
+		Week 4: Starts and finishes unit testing.
 		
 		Anthony: Data visualization 
 		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
-		Week 2: Setup backend for data visualization; simple front end to display data
-		Week 3: 
-		Week 4: 
+		Week 2: Setup backend for data visualization; simple front end to display data.
+		Week 3: Finish implementing data visualization layer.
+		Week 4: Starts and finishes unit testing.
 
 
 ​		
