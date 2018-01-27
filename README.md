@@ -20,12 +20,12 @@ Architecture
 
 	data-ingestion-sinking-layer: Kafka, Kafka Connect
 	data-transformation-layer: Kafka Streaming
-	data-storage-layer: AWS S3, Cassandra
+	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
 	data-batch-processing-layer: Spark
 	cloud-infrastructure: AWS
 
-![img](https://s3-us-west-2.amazonaws.com/github-photo-links/Screen+Shot+2018-01-19+at+10.36.51+PM.png)
+![img](https://s3-us-west-2.amazonaws.com/github-photo-links/Screen+Shot+2018-01-26+at+4.32.24+PM.png)
 ​	
 ​	
 Detailed Schema
