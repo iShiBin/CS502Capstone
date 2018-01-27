@@ -99,8 +99,8 @@ Deliverable
 		Week 4: Starts and finishes unit testing.
 		
 		Anthony: Data visualization 
-		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
-		Week 2: Setup backend for data visualization; simple front end to display data.
+		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.(DONE)
+		Week 2: Setup backend for data visualization; simple front end to display data.(DONE)
 		Week 3: Finish implementing data visualization layer.
 		Week 4: Starts and finishes unit testing.
 
