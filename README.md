@@ -1,9 +1,9 @@
-# Team 3 Capstone: Real-Time Moive Rating Data Pipeline
+# Team 3 Capstone: Real-Time Movie Rating Data Pipeline
 
 Introduction
 ------------
 
-This data pipline will process the Netflix moive real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query, with a datawarehouse for batching processing.
+This data pipline will process the Netflix movie real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query, with a datawarehouse for batching processing.
 
 Team member
 ------------
