@@ -1,14 +1,14 @@
 CREATE KEYSPACE bittiger WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
 
-CREATE TABLE bittiger.movie_rating_cs502 (
-    start_time timestamp,
+CREATE TABLE bittiger.movie_cs502 (
     movie_id int,
+    start_time timestamp,
     count int,
     movie_title text,
     rating float,
     release_year int,
-    PRIMARY KEY (start_time, movie_id)
-) WITH CLUSTERING ORDER BY (movie_id ASC)
+    PRIMARY KEY (movie_id, start_time)
+) WITH CLUSTERING ORDER BY (start_time DESC)
     AND bloom_filter_fp_chance = 0.01
     AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}
     AND comment = ''
@@ -24,15 +24,15 @@ CREATE TABLE bittiger.movie_rating_cs502 (
     AND read_repair_chance = 0.0
     AND speculative_retry = '99PERCENTILE';
 
-CREATE TABLE bittiger.movie_cs502 (
-    movie_id int,
+CREATE TABLE bittiger.weekly_movie_rating_cs502 (
     start_time timestamp,
-    count int,
-    movie_title text,
     rating float,
+    count int,
+    movie_id int,
+    movie_title text,
     release_year int,
-    PRIMARY KEY (movie_id, start_time)
-) WITH CLUSTERING ORDER BY (start_time DESC)
+    PRIMARY KEY (start_time, rating, count, movie_id)
+) WITH CLUSTERING ORDER BY (rating DESC, count DESC, movie_id ASC)
     AND bloom_filter_fp_chance = 0.01
     AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}
     AND comment = ''
