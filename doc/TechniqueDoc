@@ -1,0 +1,19 @@
+Cassandra connection: cqlsh 52.33.132.162 9042
+
+
+Include spark-cassandra connector package in Spark Applications using:
+spark-shell, pyspark, or spark-submit
+
+> $SPARK_HOME/bin/spark-shell --packages datastax:spark-cassandra-connector:2.0.6-s_2.11
+
+connect to cassandra by spark
+bin/spark-shell --conf spark.cassandra.connection.host=52.33.132.162 --packages datastax:spark-cassandra-connector:2.0.6-s_2.11 #2.0.1-s_2.11
+
+
+test spark
+scala> sc.parallelize( 1 to 100 ).sum() # expected result 5050
+
+reference:
+https://github.com/datastax/spark-cassandra-connector/blob/master/doc/0_quick_start.md
+https://www.datastax.com/dev/blog/kindling-an-introduction-to-spark-with-cassandra-part-1
+
