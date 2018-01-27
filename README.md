@@ -99,20 +99,11 @@ Deliverable
 		Week 4: Starts and finishes unit testing.
 		
 		Anthony: Data visualization 
-		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
-<<<<<<< HEAD
-		Week 2: Setup backend for data visualization; simple front end to display data
-		Week 3: Finish kafka consumer using nodejs, backend server and frontend development
-		Week 4: Testing and debugging
-		
-		
-		
-=======
-		Week 2: Setup backend for data visualization; simple front end to display data.
+		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.(DONE)
+		Week 2: Setup backend for data visualization; simple front end to display data.(DONE)
 		Week 3: Finish implementing data visualization layer.
 		Week 4: Starts and finishes unit testing.
 
 
 ​		
->>>>>>> 0300ae6569abbe14becd944a33a043df55991820
 
