@@ -61,7 +61,7 @@ Deliverable
 			a: Top 10 highest rating movie by a given month
 			b: Top 10 rated movie by a given month
 			c: Top rated month by a movie
-		(3)We are going to build a batch processing layer based on AWS S3 and Spark to forecast moive rating.
+		(3)We are going to build a batch processing layer based on Cassandra and Spark to forecast moive rating.
 	
 	Weekly milestone:
 	
