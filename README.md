@@ -1,9 +1,9 @@
-# Team 3 Capstone: Real-Time Moive Rating Data Pipeline
+# Team 3 Capstone: Real-Time Movie Rating Data Pipeline
 
 Introduction
 ------------
 
-This data pipline will process the Netflix moive real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query.
+This data pipline will process the Netflix movie real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query, with a datawarehouse for batching processing.
 
 Team member
 ------------
@@ -54,23 +54,35 @@ Detailed Schema
 Deliverable
 ---------------
 
-	Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
-	Week2: Each team member starts implementing their own module
-	Week3: Each team member finishes their own module
-	Week4: Testing, Report documenting		
+	Outcome: 
+	
+		(1)We are going to have a scalable distributed data pipeline for real-time data processing and sinking;
+		(2)We are going to provide a scalable distributed database for real-time query like:
+			a: Top 10 highest rating movie by a given month
+			b: Top 10 rated movie by a given month
+			c: Top rated month by a movie
+		(3)We are going to build a batch processing layer based on AWS S3 and Spark to forecast moive rating.
+	
+	Weekly milestone:
+	
+		Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
+		Week2: Each team member starts implementing their own module
+		Week3: Each team member finishes their own module
+		Week4: Testing, report documenting		
 	
 	Detail Ownerships:
 	
-		Tongzhou Zhou: 
-		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS
-		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster 
-		Week 3: Finishes implement data transformation layer: 
+		Tongzhou Zhou: Architecture design, implementation
+		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS (Done)
+		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster (Done)
+		Week 3: Finish implementing data transformation layer: (30% Done)
 			(1) Aggregate the data into formats to support the Cassandra data schemas in (2)
 			(2) Configure Cassandra data schema to support:
 				a: Top 10 highest rating movie by a given month
 				b: Top 10 rated movie by a given month
-				c: Top rated month by a movie		
-		Week 4: Starts and finishes unit testing
+				c: Top rated month by a movie
+			Finish S3 set up for batch data sinking.
+		Week 4: Starts and finishes unit testing.
 		
 		Bin Shi: Data ingestion using kafka; Use machine learning to predict the movie rating
 		Week 1: Produce data to kafka [done]
@@ -80,18 +92,27 @@ Deliverable
 		Week 3: Study the classification algorithm,and apply to Netflix dataset
 		Week 4: Adjust the ML model & Summarize this project
 		
-		Albert:
-		Week 1: Build database to store data
-		Week 2: design analyst algorithm, optimize database if needed
-		Week 3: 
-		Week 4: 
+		Albert: Data visualization 
+		Week 1: Build database to store data.
+		Week 2: design analyst algorithm, optimize database if needed.
+		Week 3: Collaborate with Anthony to implement the backend for data visualization, and the front end to display data.
+		Week 4: Starts and finishes unit testing.
 		
 		Anthony: Data visualization 
 		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
+<<<<<<< HEAD
 		Week 2: Setup backend for data visualization; simple front end to display data
 		Week 3: Finish kafka consumer using nodejs, backend server and frontend development
 		Week 4: Testing and debugging
 		
 		
 		
+=======
+		Week 2: Setup backend for data visualization; simple front end to display data.
+		Week 3: Finish implementing data visualization layer.
+		Week 4: Starts and finishes unit testing.
+
+
+​		
+>>>>>>> 0300ae6569abbe14becd944a33a043df55991820
 
