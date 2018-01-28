@@ -12,7 +12,7 @@ with open(file_name, 'r') as data:
     for movie in data:
         first_comma_index = movie.find(',')
         movie_id = movie[:first_comma_index]
-        movie_year_name = movie[first_comma_index + 1:]
+        movie_year_name = movie[first_comma_index + 1:-1]
         producer.send(topic = topic_name, value = movie_year_name, key= movie_id, timestamp_ms=time.mktime(time.gmtime()))
 #         time.sleep(1)
 

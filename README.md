@@ -3,7 +3,7 @@
 Introduction
 ------------
 
-This data pipline will process the Netflix movie real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query, with a datawarehouse for batching processing.
+This data pipline will process the Netflix movie real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query and batching processing.
 
 Team member
 ------------
@@ -20,12 +20,12 @@ Architecture
 
 	data-ingestion-sinking-layer: Kafka, Kafka Connect
 	data-transformation-layer: Kafka Streaming
-	data-storage-layer: AWS S3, Cassandra
+	data-storage-layer: Cassandra
 	data-visualization-layer: NodeJS
 	data-batch-processing-layer: Spark
 	cloud-infrastructure: AWS
 
-![img](https://s3-us-west-2.amazonaws.com/github-photo-links/Screen+Shot+2018-01-19+at+10.36.51+PM.png)
+![img](https://s3-us-west-2.amazonaws.com/github-photo-links/Screen+Shot+2018-01-26+at+4.32.24+PM.png)
 ​	
 ​	
 Detailed Schema
@@ -61,7 +61,7 @@ Deliverable
 			a: Top 10 highest rating movie by a given month
 			b: Top 10 rated movie by a given month
 			c: Top rated month by a movie
-		(3)We are going to build a batch processing layer based on AWS S3 and Spark to forecast moive rating.
+		(3)We are going to build a batch processing layer based on Cassandra and Spark to forecast moive rating.
 	
 	Weekly milestone:
 	
@@ -99,8 +99,8 @@ Deliverable
 		Week 4: Starts and finishes unit testing.
 		
 		Anthony: Data visualization 
-		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.
-		Week 2: Setup backend for data visualization; simple front end to display data.
+		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.(DONE)
+		Week 2: Setup backend for data visualization; simple front end to display data.(DONE)
 		Week 3: Finish implementing data visualization layer.
 		Week 4: Starts and finishes unit testing.
 
