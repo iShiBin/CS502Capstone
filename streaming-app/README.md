@@ -1,6 +1,7 @@
 First, kill any running instance:
 
 ps aux | grep uber-cs502-capstone-0.0.1-SNAPSHOT.jar
+
 kill -9 process-id
 
 Second, reset streaming app history
