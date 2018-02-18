@@ -3,10 +3,11 @@ import time
 from collections import defaultdict
 
 kafka_server = 'node1:9092'
-rating_file = '../data/ratings.csv'
+# rating_file = '../data/ratings.csv'
+rating_file = '/Volumes/FIT128G/Downloads/ml-20m/ratings.csv'
 topic_name = 'input_cs502'
 interval = 1 # sleep time in second
-batch_size = 3600 # how many seconds as a batch
+batch_size = 86400 # one day. how many seconds as a batch
 
 def read_ratings(file_name):
     ratings = defaultdict(list)
