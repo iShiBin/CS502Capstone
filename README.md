@@ -26,8 +26,8 @@ Architecture
 	cloud-infrastructure: AWS
 
 ![img](https://s3-us-west-2.amazonaws.com/github-photo-links/Screen+Shot+2018-01-26+at+4.32.24+PM.png)
-​	
-​	
+​
+​
 Detailed Schema
 ---------------
 
@@ -37,7 +37,7 @@ Detailed Schema
     		user_id int PRIMARY KEY,
     		recommendations map<text, text>
 	)
-	
+
 	CREATE TABLE bittiger.movielens_movie (
     		movie_id int,
     		start_time timestamp,
@@ -52,24 +52,24 @@ Detailed Schema
 Deliverable
 ---------------
 
-	Outcome: 
-	
+	Outcome:
+
 		(1)We are going to have a scalable distributed data pipeline for real-time data processing and sinking;
 		(2)We are going to provide a scalable distributed database for real-time query like:
 			a: Top 10 highest rating movie by a given month
 			b: Top 10 rated movie by a given month
 			c: Top rated month by a movie
 		(3)We are going to build a batch processing layer based on Cassandra and Spark to forecast moive rating.
-	
+
 	Weekly milestone:
-	
+
 		Week1: Figure out project architecture, data source, determine the requirements and the functionalities to implement
 		Week2: Each team member starts implementing their own module
 		Week3: Each team member finishes their own module
 		Week4: Testing, report documenting		
-	
+
 	Detail Ownerships:
-	
+
 		Tongzhou Zhou: Architecture design, implementation
 		Week 1: Set up Kafka Cluster, Cassandra Cluster in AWS (Done)
 		Week 2: Starts implement data transformation layer, Set up Kafka Connect to load data from Kafka Cluster to Cassandra Cluster (Done)
@@ -81,7 +81,7 @@ Deliverable
 				c: Top rated month by a movie
 			Finish S3 set up for batch data sinking.
 		Week 4: Starts and finishes unit testing.
-		
+
 		Bin Shi: Data ingestion using kafka; Use machine learning to predict the movie rating
 		Week 1: Produce data to kafka [done]
 				Send movie title data [done]
@@ -89,14 +89,14 @@ Deliverable
 		Week 2: Add error/exception handling and more comments in the source code [done]
 		Week 3: Study the classification algorithm,and apply to Netflix dataset
 		Week 4: Adjust the ML model & Summarize this project
-		
-		Albert: Data visualization 
+
+		Albert: Data visualization
 		Week 1: Build database to store data.
 		Week 2: design analyst algorithm, optimize database if needed.
 		Week 3: Collaborate with Anthony to implement the backend for data visualization, and the front end to display data.
 		Week 4: Starts and finishes unit testing.
-		
-		Anthony: Data visualization 
+
+		Anthony: Data visualization
 		Week 1: Determine the requirements to implement, get ready to fulfill the Nodejs module features; Data cleaning.(DONE)
 		Week 2: Setup backend for data visualization; simple front end to display data.(DONE)
 		Week 3: Finish implementing data visualization layer.
@@ -104,4 +104,3 @@ Deliverable
 
 
 ​		
-
