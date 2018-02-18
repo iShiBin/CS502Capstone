@@ -1,8 +1,8 @@
 import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.recommendation.ALS
 
-val userRecsK = 3 // top k recommended movies for a user
-val movieRecsK = 3 // top k recommended users for a movie
+val userRecsK = 5 // top k recommended movies for a user
+val movieRecsK = 5 // top k recommended users for a movie
 
 val ratings = spark.read.format("csv").option("header","true").option("inferSchema", true).csv("../data/ratings.csv")
 
@@ -22,10 +22,10 @@ val evaluator = new RegressionEvaluator().setMetricName("rmse").setLabelCol("rat
 
 // Generate top 10 movie recommendations for each user
 val userRecs = model.recommendForAllUsers(userRecsK)
-userRecs.show(20, false)
+userRecs.show(10, false)
 
 // Generate top 10 user recommendations for each movie
 val movieRecs = model.recommendForAllItems(movieRecsK)
-movieRecs.show(20, false)
+movieRecs.show(10, false)
 
 val RMSE = evaluator.evaluate(predictions) // Root Mean Square Error

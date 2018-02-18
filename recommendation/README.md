@@ -102,9 +102,9 @@ Note: For display purpose, I only shwo the top 3 recommended movies, and users.
 
 ## Next Steps:
 
-- [ ] read the input data from Cassandra
-- [ ] run the program use the full dataset (20 million ratings with 550M file size)
-- [ ] put the running result to Kafka topic (optional)
+- [x] read the input data from Cassandra
+- [x] run the program use the full dataset (20 million ratings with 550M file size)
+- [x] put the running result to Kafka topic (optional)
 
 
 
