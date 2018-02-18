@@ -3,7 +3,7 @@
 Introduction
 ------------
 
-This data pipline will process the Netflix movie real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query and batching processing.
+This data pipline will process the Netflix movie real-time rating data, visualize the movie rating trend, and provide a scalable distributed database for real-time query and Machine learning batching processing for movie recommendation.
 
 Team member
 ------------
@@ -33,22 +33,20 @@ Detailed Schema
 
 	Cassandra tables:
 
-	CREATE TABLE movie_rating_cs502 (
-			start_time timestamp,
-			rating float,
-			movie_id int,
-			count int,
-			movie_title text,
-			PRIMARY KEY (start_time, rating, movie_id)
-	) WITH CLUSTERING ORDER BY (rating DESC, movie_id ASC)
+	CREATE TABLE bittiger.recommendation (
+    		user_id int PRIMARY KEY,
+    		recommendations map<text, text>
+	)
 	
-	CREATE TABLE bittiger.movie_cs502 (
-			movie_id int,
-			start_time timestamp,
-			count int,
-			movie_title text,
-			rating float,
-			PRIMARY KEY (movie_id, start_time)
+	CREATE TABLE bittiger.movielens_movie (
+    		movie_id int,
+    		start_time timestamp,
+    		count int,
+    		genre text,
+    		movie_title text,
+    		rating float,
+    		users text,
+    		PRIMARY KEY (movie_id, start_time)
 	) WITH CLUSTERING ORDER BY (start_time DESC)
 
 Deliverable
